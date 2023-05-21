@@ -7,23 +7,42 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        #content{
-            height:100vh;
-            display:flex;
+        #content {
+            height: 100vh;
+            display: flex;
             align-items: center;
-            justify-content: center ;
+            justify-content: center;
             flex-wrap: wrap;
             flex-direction: column;
         }
-
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+
+            let light = true
+
+            const body = document.querySelector('body')
+            const h1 = document.querySelector('h1')
+            const btn = document.querySelector('#btn')
+
+
+            btn.addEventListener('click', ()=>{
+                if(light === true){
+                    body.style.backgroundColor=`rgba(0,0,0)`;
+                    h1.style.color=`rgba(255,255,255)`
+
+                }
+
+            })
+        })
+    </script>
 
 </head>
 <body>
 <div id="content">
 <h1>Dark And Light</h1>
-<button id="Dark">Dark Mode</button>
-<button id="light">Light Mode</button>
+<button id="btn">Dark Mode</button>
+
 </div>
 
 </body>
